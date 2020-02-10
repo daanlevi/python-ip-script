@@ -1,5 +1,5 @@
 pipeline {
-  agent { docker { image 'python:2.7.16' } }
+  agent { docker { image 'python:3.7.6' } }
   stages {
     stage('Source') { // Get code
       steps {
