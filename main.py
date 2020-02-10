@@ -17,7 +17,8 @@ r = requests.get(requestUrl)
 data = json.loads(r.text)
 
 # Print the Remote IP fetched from the page
-print ('Your IP address is: ' + data['ip'])
+print ('Your IP address is: ')
+print (data)
 
 # End
 print ('You succesfully ran this script!')
