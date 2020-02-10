@@ -3,9 +3,7 @@
 # import depending packages
 import json
 import requests
-import socket
 
-default = (socket.gethostbyname(socket.gethostname()))
 # Ofcourse, no application is complete without Hello, world!
 print ('Hello, world!')
 
@@ -13,7 +11,7 @@ print ('Hello, world!')
 requestUrl = 'http://ipinfo.io'
 
 # Fire the request
-r = requests.get(requestUrl, default)
+r = requests.get(requestUrl)
 
 # Get the JSON date and parse it
 data = json.loads(r.text)
