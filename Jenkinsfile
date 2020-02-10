@@ -1,4 +1,5 @@
 pipeline {
+  agent none
   stages {
     stage('Source') { // Get code
       // get code from our Git repository
