@@ -10,7 +10,6 @@ pipeline {
     stage('build') {
       steps {
         sh 'pip install --user -r requirements.txt'
-        sh 'python main.py'
       }
     }
     stage('run') {
