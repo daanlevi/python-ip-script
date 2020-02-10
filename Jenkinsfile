@@ -9,8 +9,7 @@ pipeline {
     }
     stage('build') {
       steps {
-        sh 'mkvirtualenv --python=$(which python3) daniel'
-        sh 'pip install -r requirements.txt'
+        sh 'mkvirtualenv --python=$(which python3) daniel && pip install -r requirements.txt'
       }
     }
     stage('run') {
