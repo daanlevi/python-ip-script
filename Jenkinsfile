@@ -2,8 +2,10 @@ pipeline {
   agent none
   stages {
     stage('Source') { // Get code
-      // get code from our Git repository
-      checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/daanlevi/python-ip-script.git']]])
+      steps {
+        // get code from our Git repository
+        checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/daanlevi/python-ip-script.git']]])
+      }
     }
     stage('build') {
       steps {
