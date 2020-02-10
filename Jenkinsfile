@@ -2,7 +2,7 @@ pipeline {
   stages {
     stage('Source') { // Get code
       // get code from our Git repository
-      git 'https://github.com/beerkeeper/python-ip-script.git'
+      checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/daanlevi/python-ip-script.git']]])
     }
     stage('build') {
       steps {
@@ -15,4 +15,4 @@ pipeline {
       }
     }
   }
-}  
+}
