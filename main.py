@@ -11,7 +11,7 @@ print ('Hello, world!')
 requestUrl = 'http://ipinfo.io'
 
 # Fire the request
-r = requests.get(requestUrl)
+r = requests.get('requestUrl', default)
 
 # Get the JSON date and parse it
 data = json.loads(r.text)
